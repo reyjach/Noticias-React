@@ -7,7 +7,9 @@ class Noticas extends Component {
     render() { 
         return ( 
             <div className="row">
-                <Notica></Notica>
+               {this.props.noticias.map(noticia => (
+                <Notica key={noticia.url} noticia={noticia}></Notica>
+               ))}
             </div>
          );
     }
